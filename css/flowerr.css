@@ -54,8 +54,8 @@ body{
     
 }
 
-.header .navbar  > a:after ,
-.header.navbar > a.active:after{
+.header .navbar  > a::after ,
+.header.navbar > a.active::after{
     content:"";
     width:0;
     height:2px;
@@ -64,10 +64,10 @@ body{
     margin-top: 2px;
     transition: .5s;
 }
-.header .navbar > a.active:after{
+.header .navbar > a.active::after{
  width:100%;
 }
-.header .navbar > a:hover:after{
+.header .navbar > a:hover::after{
     width: 100%;
 }
 .header .navbar a:hover{

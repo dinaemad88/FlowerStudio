@@ -41,17 +41,63 @@ body{
     padding: 2px;
     font-size: 35px;
   }
-.header .navbar a{
+ 
+
+.header .navbar > a{
+    list-style: none;
+    display: inline-block;
+}
+.header .navbar > a{
+    color: #fff;
     margin:0 1rem;
     font-size: 23px;
-    color:#fff;
     
+}
+
+.header .navbar  > a:after ,
+.header.navbar > a.active:after{
+    content:"";
+    width:0;
+    height:2px;
+    display: block;
+    background-color: #73001a;
+    margin-top: 2px;
+    transition: .5s;
+}
+.header .navbar > a.active:after{
+ width:100%;
+}
+.header .navbar > a:hover:after{
+    width: 100%;
 }
 .header .navbar a:hover{
     color:#741818;
-    border-bottom: .1rem solid #741818;
-    padding-bottom: .5rem;
+   
+    
 }
+.yy{
+    position: relative;
+}
+.a-bp{
+    color: white;
+    display: block;
+    padding: 10px;
+}
+.bp {
+    position: absolute;
+    width: 120px;
+    padding:5px;
+    background-color: #741818;
+    text-align: center;
+    left:60%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+    }
+    .yy:hover + .bp{
+        visibility: visible;
+        opacity:1;
+    }
 .header .icons div{
     color:#fff;
     cursor: pointer;
@@ -483,6 +529,9 @@ letter-spacing: 2px;
     background-color: #cc7171;
     margin: 10px 5px;
     border-radius: 50%;
+}
+.service-box li:hover{
+    background-color:#73001a;
 }
 .clear {
     clear: both;
